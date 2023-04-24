@@ -14,6 +14,7 @@ function App() {
     
     const filteredData = [];
 
+
 if(!filters.name){
   return data;
 }
@@ -49,10 +50,26 @@ if(!filters.name){
 
   const addItemToData = (item) => {
     let items = data["items"];
-    item.id = items.length;
-    items.push(item);
-    setData({items: items});
-    console.log(data);
+
+
+    const requestOptions = {
+      method: "POST", //using a post method
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(item),
+    };
+    fetch("http://localhost:3000/items",  requestOptions)
+    .then((response) => response.json())
+    .then((data) => {
+      items.push(data);
+      setData({items: items});
+    });
+
+
+
+    
+
   };
 
 

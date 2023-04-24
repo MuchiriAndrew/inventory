@@ -3,6 +3,8 @@ import SearchBar from "./SearchBar";
 import { useState } from "react";
 import AddItem from "./AddItem";
 import ItemsDisplay from "./ItemsDisplay";
+// import styled from "styled-component"; // how to use the styled component library
+
 
 function App() {
   const [filters, setFilters] = useState ({});
@@ -23,10 +25,21 @@ function App() {
 
 
   return (
-    <div className="App">
-      <SearchBar updateSearchParams = {updateFilters}/>
+    <div className="container">
+
+      <div className="row mt-3">
       <ItemsDisplay items={data["items"]} />
+      </div>
+
+      <div className="row mt-3">
+      <SearchBar updateSearchParams = {updateFilters}/>
+      </div>
+
+      <div className="row mt-3">
       <AddItem addItem = {addItemToData}/>
+      </div>
+      
+    
     </div>
   );
 }

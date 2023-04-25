@@ -1,18 +1,25 @@
 {
   "items": [
     {
-      "name": "allen",
-      "price": "5",
-      "type": "test",
-      "brand": "test",
+      "name": "Jacket",
+      "price": "1000",
+      "type": "Denim",
+      "brand": "Levis",
       "id": 1
     },
     {
-      "name": "drew ",
-      "price": "4.99",
-      "type": "person",
-      "brand": "person",
+      "name": "Shirt",
+      "price": "500",
+      "type": "Cotton",
+      "brand": "VDA",
       "id": 2
+    },
+    {
+      "name": "Shirt",
+      "price": "200",
+      "type": "Polyester",
+      "brand": "Nike",
+      "id": 3
     }
   ]
 }
